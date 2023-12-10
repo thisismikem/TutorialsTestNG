@@ -1,9 +1,8 @@
-package DemoTestNG;
+package demotest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -18,7 +17,7 @@ import java.net.URL;
 public class CrossBrowserTesting {
     WebDriver driver;
     private String username = "James Lee";
-    private String accessKey = "tptuU5tbdSaoRUL24cxq2ektJLjQcFlSsFF5jzk85LxElIc9Xp";
+    private String accessKey = "VHKvuiV22S9wAsASixr1ASt0PSTQoxkRhnTqKhSfqoBTNe8Vz4";
     private String hub = "@hub.lambdatest.com/wd/hub";
     DesiredCapabilities caps = new DesiredCapabilities();
 
