@@ -1,4 +1,4 @@
-package DemoTestNG;
+package demotest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;

@@ -1,6 +1,6 @@
-package DemoTestNG;
+package demotest.configurations;
 
-import com.mmtest.utilities.MmTestValue;
+import com.mmtest.utilities.LittleTools;
 import org.testng.annotations.*;
 
 @Test(groups = "smoke")
@@ -47,6 +47,7 @@ public class ConfigurationAnnotations_2_ListBox {
     @BeforeSuite
     public void beforeSuite() {
         System.out.println("    (1) Execute @BeforeSuite 2");
+        LittleTools.checkDriver();
     }
 
     @AfterSuite
@@ -56,11 +57,11 @@ public class ConfigurationAnnotations_2_ListBox {
 
     @BeforeGroups(groups = {"regression", "smoke"})
     public void beforeGroups() {
-        System.out.println("            (3a) Execute @BeforeGroups 2 - flag = " + ++MmTestValue.flag);
+        System.out.println("            (3a) Execute @BeforeGroups 2 - flag = " + ++LittleTools.flag);
     }
 
     @AfterGroups(groups = {"regression", "smoke"})
     public void afterGroups() {
-        System.out.println("            (3a) Execute @AfterGroups 2 - flag = " + --MmTestValue.flag);
+        System.out.println("            (3a) Execute @AfterGroups 2 - flag = " + --LittleTools.flag);
     }
 }

@@ -3,14 +3,14 @@
 <suite name="Parallel Testing" parallel="tests" thread-count="2">
     <test name="(1st test) Parallel Execution">
         <classes>
-            <class name="DemoTestNG.ParallelTesting1"></class>
-            <class name="DemoTestNG.ParallelTesting2"></class>
+            <class name="demotest.ParallelTesting1"></class>
+            <class name="demotest.ParallelTesting2"></class>
         </classes>
     </test>
     <test name="(2nd test) Parallel Execution">
         <classes>
-            <class name="DemoTestNG.ParallelTesting1"></class>
-            <class name="DemoTestNG.ParallelTesting2"></class>
+            <class name="demotest.ParallelTesting1"></class>
+            <class name="demotest.ParallelTesting2"></class>
         </classes>
     </test>
 </suite>

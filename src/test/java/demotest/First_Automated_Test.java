@@ -1,5 +1,6 @@
-package DemoTestNG;
+package demotest;
 
+import com.mmtest.utilities.LittleTools;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,17 +11,21 @@ public class First_Automated_Test {
 
     WebDriver driver;
 
-    @BeforeMethod
+    @BeforeClass
     public void setup() {
-        WebDriverManager.chromedriver().setup();
+        LittleTools.checkDriver();
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    }
+
+    @BeforeMethod
+    public void setupMethod() {
         driver.get("https://www.lambdatest.com/selenium-playground/");
     }
 
-    @AfterMethod
-    public void tearDown() {
-//        driver.quit();
+    @AfterClass
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.quit();
     }
 
     @Test
@@ -35,5 +40,4 @@ public class First_Automated_Test {
         driver.findElement(By.id("birthday")).sendKeys("06/07/2008");
 
     }
-
 }

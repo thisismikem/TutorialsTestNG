@@ -7,21 +7,21 @@
     <test name="Test on Chrome">
         <parameter name="Browser" value="chrome"></parameter>
         <classes>
-            <class name="DemoTestNG.CrossBrowserTesting2"></class>
+            <class name="demotest.crossbrowser.CrossBrowserTesting2"></class>
         </classes>
     </test>
 
     <test name="Test on Edge">
         <parameter name="Browser" value="edge"></parameter>
         <classes>
-            <class name="DemoTestNG.CrossBrowserTesting2"></class>
+            <class name="demotest.crossbrowser.CrossBrowserTesting2"></class>
         </classes>
     </test>
 
     <test name="Test on Firefox">
         <parameter name="Browser" value="firefox"></parameter>
         <classes>
-            <class name="DemoTestNG.CrossBrowserTesting2"></class>
+            <class name="demotest.crossbrowser.CrossBrowserTesting2"></class>
         </classes>
     </test>
 </suite>

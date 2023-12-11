@@ -3,14 +3,14 @@
 <suite name="Annotations">
     <test name="Run methods">
         <classes>
-            <class name="DemoTestNG.ConfigurationAnnotations_1_DatePickers">
+            <class name="demotest.configurations.ConfigurationAnnotations_1_DatePickers">
                 <methods>
                     <exclude name="test1_BootstrapDatePicker"/>
                     <include name="test2_JQueryDatePicker"/>
                 </methods>
             </class>
 
-            <class name="DemoTestNG.ConfigurationAnnotations_2_ListBox"></class>
+<!--            <class name="demotest.configurations.ConfigurationAnnotations_2_ListBox"></class>-->
         </classes>
     </test>
 </suite>

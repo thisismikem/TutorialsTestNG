@@ -1,10 +1,14 @@
-package DemoTestNG;
+package demotest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -14,10 +18,22 @@ public class AssertionsTest {
     WebDriver driver;
     SoftAssert softAssert = new SoftAssert();
 
+    @FindBy(partialLinkText = "Checkbox Demo")
+    private WebElement checkBoxDemo;
+
+    @FindBy(id = "isAgeSelected")
+    private WebElement isAgeSelected;
+
+    @FindBy(id="txtAge")
+    private WebElement txtAge;
+
+
+
     @BeforeMethod
-    public void setup() {
+    public void setupMethod() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        PageFactory.initElements(driver,this);
         driver.get("https://www.lambdatest.com/selenium-playground/");
     }
 
@@ -29,7 +45,7 @@ public class AssertionsTest {
     @Test
     public void testSingleCheckbox() {
         driver.findElement(By.linkText("Checkbox Demo")).click();
-        driver.findElement(By.id("isAgeSelected")).click();
+        isAgeSelected.click();
 
 //        Assert.assertEquals(driver.findElement(By.id("txtAge")).getText(), "Checked");
         Assert.assertTrue(driver.findElement(By.id("txtAge")).getText().equals("Checked"), "something is wrong");

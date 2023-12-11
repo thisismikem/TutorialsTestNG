@@ -1,4 +1,4 @@
-package DemoTestNG;
+package demotest;
 
 import com.google.common.base.Function;
 import org.openqa.selenium.By;

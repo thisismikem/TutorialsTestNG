@@ -7,21 +7,21 @@
     <test name="Pass Parameters Test">
         <parameter name="TestResult" value="Pass"></parameter>
         <classes>
-            <class name="DemoTestNG.ParameterizedTest"></class>
+            <class name="demotest.ParameterizedTest"></class>
         </classes>
     </test>
 
     <test name="Fail Parameters Test">
         <parameter name="TestResult" value="Fail"></parameter>
         <classes>
-            <class name="DemoTestNG.ParameterizedTest"></class>
+            <class name="demotest.ParameterizedTest"></class>
         </classes>
     </test>
 
     <test name="Skip Parameters Test">
         <parameter name="TestResult" value="Skip"></parameter>
         <classes>
-            <class name="DemoTestNG.ParameterizedTest"></class>
+            <class name="demotest.ParameterizedTest"></class>
         </classes>
     </test>
 </suite>

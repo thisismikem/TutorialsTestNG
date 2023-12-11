@@ -1,5 +1,6 @@
-package DemoTestNG;
+package demotest.configurations;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.*;
 
 public class ConfigurationAnnotations_1_DatePickers {

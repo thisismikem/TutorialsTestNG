@@ -9,7 +9,7 @@
         <parameter name="Version" value="118"></parameter>
         <parameter name="Platform" value="Windows 11"></parameter>
         <classes>
-            <class name="DemoTestNG.CrossBrowserTesting"></class>
+            <class name="demotest.crossbrowser.CrossBrowserTesting"></class>
         </classes>
     </test>
 
@@ -18,7 +18,7 @@
         <parameter name="Version" value="118"></parameter>
         <parameter name="Platform" value="Windows 11"></parameter>
         <classes>
-            <class name="DemoTestNG.CrossBrowserTesting"></class>
+            <class name="demotest.crossbrowser.CrossBrowserTesting"></class>
         </classes>
     </test>
 
@@ -27,7 +27,7 @@
         <parameter name="Version" value="0.33"></parameter>
         <parameter name="Platform" value="Windows 11"></parameter>
         <classes>
-            <class name="DemoTestNG.CrossBrowserTesting"></class>
+            <class name="demotest.crossbrowser.CrossBrowserTesting"></class>
         </classes>
     </test>
 </suite>
