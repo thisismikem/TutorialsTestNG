@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Testing">
+
+    <test name="Test on Chrome">
+        <parameter name="Browser" value="chrome"></parameter>
+        <parameter name="Version" value="118"></parameter>
+        <parameter name="Platform" value="Windows 11"></parameter>
+        <classes>
+            <class name="demotest.crossbrowser.CrossBrowserTesting1"></class>
+        </classes>
+    </test>
+
+    <test name="Test on Edge">
+        <parameter name="Browser" value="edge"></parameter>
+        <parameter name="Version" value="118"></parameter>
+        <parameter name="Platform" value="Windows 11"></parameter>
+        <classes>
+            <class name="demotest.crossbrowser.CrossBrowserTesting1"></class>
+        </classes>
+    </test>
+
+    <test name="Test on Firefox">
+        <parameter name="Browser" value="firefox"></parameter>
+        <parameter name="Version" value="200"></parameter>
+        <parameter name="Platform" value="Windows 11"></parameter>
+        <classes>
+            <class name="demotest.crossbrowser.CrossBrowserTesting1"></class>
+        </classes>
+    </test>
+
+</suite>

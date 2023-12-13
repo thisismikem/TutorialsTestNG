@@ -16,7 +16,7 @@ import java.net.URL;
 
 public class CrossBrowserTesting {
     WebDriver driver;
-    private String username = "James Lee";
+    private String username = "maimao";
     private String accessKey = "VHKvuiV22S9wAsASixr1ASt0PSTQoxkRhnTqKhSfqoBTNe8Vz4";
     private String hub = "@hub.lambdatest.com/wd/hub";
     DesiredCapabilities caps = new DesiredCapabilities();
