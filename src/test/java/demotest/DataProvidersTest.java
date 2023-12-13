@@ -1,8 +1,11 @@
 package demotest;
 
+import com.mmtest.pet.DataProviders;
+import com.mmtest.pet.Pet;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -45,4 +48,22 @@ public class DataProvidersTest {
         driver.findElement(By.id("inputEmail4")).sendKeys(email);
     }
 
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "PetDataJson")
+    void testUsingPetDataJson(Pet pet) {
+        driver.get("https://www.lambdatest.com/selenium-playground/input-form-demo");
+        driver.findElement(By.id("name")).sendKeys(pet.getName());
+        driver.findElement(By.id("inputEmail4")).sendKeys(pet.getStatus());
+    }
+
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "PetDataExcel")
+    void testUsingPetDataExcel(Pet pet) {
+        driver.get("https://www.lambdatest.com/selenium-playground/input-form-demo");
+        driver.findElement(By.id("name")).sendKeys(pet.getName());
+        driver.findElement(By.id("inputEmail4")).sendKeys(pet.getStatus());
+    }
+
+    @AfterMethod
+    void quit() {
+        driver.quit();
+    }
 }

@@ -29,7 +29,7 @@ public class ParallelTesting1 {
 
 
     @AfterMethod
-    void quit() {
+    void quitBrowser() {
         driver.quit();
     }
 }

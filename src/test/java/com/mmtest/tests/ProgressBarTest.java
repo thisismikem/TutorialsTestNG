@@ -6,7 +6,7 @@ import org.testng.asserts.SoftAssert;
 
 public class ProgressBarTest extends BaseTest {
     SoftAssert softAssert = new SoftAssert();
-    BootstrapProgressBarPage progressBarPage = new BootstrapProgressBarPage();
+    BootstrapProgressBarPage progressBarPage = new BootstrapProgressBarPage(driver);
 
     @Test
     public void testProgressBarPercentage() {
@@ -15,7 +15,7 @@ public class ProgressBarTest extends BaseTest {
         String actualMessage = progressBarPage.getCompletedMessage();
         String actualPercentage = progressBarPage.getProgressBarPercentage();
         String expectedMessage = "Download completed!";
-        String expectedPercentage = "1000%";
+        String expectedPercentage = "100%";
 
         softAssert.assertEquals(actualMessage, expectedMessage, "message is not correct");
         softAssert.assertEquals(actualPercentage, expectedPercentage, "percentage is not correct");

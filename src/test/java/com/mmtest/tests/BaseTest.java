@@ -19,8 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BaseTest {
-    private WebDriver driver;
-    BasePage basePage;
+    WebDriver driver;
     HomePage homePage;
     private final String AUT_URL = "https://www.lambdatest.com/selenium-playground/";
 
@@ -40,10 +39,9 @@ public class BaseTest {
     public void loadApplication() {
         driver.get(AUT_URL);
 
-        basePage = new BasePage();
-        basePage.setDriver(driver);
+//        basePage = new BasePage(driver);
 
-        homePage = new HomePage();
+        homePage = new HomePage(driver);
     }
 
     @AfterMethod

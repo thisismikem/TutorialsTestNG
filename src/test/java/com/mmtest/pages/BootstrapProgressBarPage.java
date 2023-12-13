@@ -1,6 +1,9 @@
 package com.mmtest.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -8,23 +11,30 @@ import java.time.Duration;
 
 public class BootstrapProgressBarPage extends BasePage {
 
-    private By startDownloadButton = By.id("dwnBtn");
-    private By progressBarPercentage = By.cssSelector(".counter");
-    private By completedMessage = By.xpath("//p[contains(@class,'success')]");
+    @FindBy(id = "dwnBtn")
+    private WebElement startDownloadButton;
+
+    @FindBy(css = ".counter")
+    private WebElement progressBarPercentage;
+
+    @FindBy(xpath = "//p[contains(@class,'success')]")
+    private WebElement completedMessage;
+
+    public BootstrapProgressBarPage(WebDriver driver) {
+        super(driver);
+    }
 
     public void clickStartDownloadButton() {
-        click(startDownloadButton);
+        startDownloadButton.click();
     }
 
     public String getProgressBarPercentage() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(progressBarPercentage));
+        waitElement(progressBarPercentage);
         return getText(progressBarPercentage);
     }
 
     public String getCompletedMessage() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(completedMessage));
+        waitElement(completedMessage);
         return getText(completedMessage);
     }
 }

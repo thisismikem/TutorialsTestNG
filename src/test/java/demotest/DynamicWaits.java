@@ -33,7 +33,7 @@ public class DynamicWaits {
 
         By image = By.xpath("//div[@id='loading']//img");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(image));
 
         boolean isImageDisplayed = driver.findElement(image).isDisplayed();
@@ -50,11 +50,11 @@ public class DynamicWaits {
         // Waiting 30 seconds for an element to be present on the page, checking
         // for its presence once every 100 Milliseconds.
         Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30L))
+                .withTimeout(Duration.ofSeconds(20))
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoring(NoSuchElementException.class);
 
-        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+        wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
                 WebElement progress = driver.findElement(By.xpath("//div[@class='progress-label']"));
                 String progressBarText = progress.getText();
